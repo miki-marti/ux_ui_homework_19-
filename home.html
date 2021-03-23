@@ -6,9 +6,84 @@
 
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.6"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <title> Home </title>
 
 <style>
+
+  
+/* Navigation bar */
+
+
+.customNav {
+  position: fixed;
+  width: 100%;
+  background-size: cover;
+  background-color: white !important;
+  z-index: 10;
+
+  font-family: Lobster;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 37px;
+
+color: #2D4144;
+
+text-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+.navbar-nav {
+  background-color: white;
+  margin-left: auto;
+  margin-right: 1 !important;
+
+  font-family: Lobster;
+font-style: normal;
+font-weight: normal;
+font-size: 30px !important;
+line-height: 37px;
+
+color: #2D4144;
+
+text-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand img {
+  padding-right: 50px;
+  width: 200px;
+}
+.nav-item {
+  margin: 50px 50px !important;;
+
+  font-family: Lobster;
+font-style: normal;
+font-weight: normal;
+font-size: 30px !important;
+line-height: 37px;
+
+color: #2D4144;
+
+text-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.dropdown-menu {
+  background-size: cover;
+  color: #16181b;
+  background-color: white;
+  font-size: 30px !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: underline;
+    background-color: white;
+    font-size: 30px !important;
+}
+
+
+.customNav a {
+  color: #647274 !important;
+}
 
 
 
@@ -34,24 +109,6 @@
   100% { transform: rotate(360deg); }
 }
 
-img.menu {
-position: absolute;
-left: 36px;
-right: 300px;
-top: 78px;
-bottom: 2000px;
-}
-
-img.logo_mobile {
-position: absolute;
-width: 134px;
-height: 81px;
-left: 120px;
-right: 121px;
-top: 44px;
-bottom: 1981px;
-opacity: 100%
-}
 
 img.intro_mobile {
 position: absolute;
@@ -213,95 +270,13 @@ top: 1586px;
 }
 
 
-
-
-  
-
- 
-
-  
- 
-img.Logo_original {
-  position: absolute;
-width: 188px;
-height: 103px;
-left: 396px;
-top: 40px;
-opacity: 100%
-}
-
-div ul li.home {
-  list-style-type:none;
-position: absolute;
-width: 98px;
-height: 50px;
-left: 650px;
-top: 65px;
-
-font-family: Lobster;
-font-style: normal;
-font-weight: normal;
-font-size: 40px;
-line-height: 50px;
-/* identical to box height */
-
-
-color: #2D4144;
-
-text-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
-
-}
-
-div ul li.work {
-  list-style-type:none;
-  position: absolute;
-width: 102px;
-height: 52px;
-left: 792px;
-top: 65px;
-
-font-family: Lobster;
-font-style: normal;
-font-weight: normal;
-font-size: 40px;
-line-height: 50px;
-
-color: #647274;
-
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-div ul li.about {
-  list-style-type:none;
-  position: absolute;
-width: 99px;
-height: 52px;
-left: 920px;
-top: 65px;
-
-font-family: Lobster;
-font-style: normal;
-font-weight: normal;
-font-size: 40px;
-line-height: 50px;
-
-color: rgba(45, 65, 68, 0.7);
-
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-
-  
-
 img.intro {
   position: absolute;
 width: 1315px;
 height: 520px;
 left: 91px;
 top: 223px;
-opacity: 90%;
+opacity: 70%;
 }
 
 
@@ -354,7 +329,7 @@ width: 1320px;
 height: 680px;
 left: 60px;
 top: 1008px;
-opacity: 90%;
+opacity: 80%;
 
 }
 
@@ -407,7 +382,7 @@ width: 1320px;
 height: 680px;
 left: 60px;
 top: 2010px;
-opacity: 90%;
+opacity: 80%;
 }
 
 .btn3 {
@@ -457,7 +432,7 @@ width: 471px;
 height: 157px;
 left: 540px;
 top: 3012px;
-opacity: 90%;
+opacity: 70%;
 
 }
 
@@ -546,12 +521,34 @@ opacity: 90%;
 <body>
 
 <header>
-<div class="iphone">
 
-  <img class="menu" src="menu_iphone.png">
-<img class="logo_mobile" src="logo_iphone.png">
 
-</div>    
+  <nav class="navbar navbar-expand-lg navbar-light bg-light customNav">
+    <a class="navbar-brand" href="#"><img src="logo_iphone.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Work</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Mutt Love Rescue</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Plate Theory</a>
+          </div>
+      </ul>
+    </div>
+  </nav>
+
+
 </header>
 
 <section>
@@ -595,22 +592,7 @@ opacity: 90%;
 <div class= "pc">
   
 <div class="block"> </div>
-    <div>
-      <img class="Logo_original" src="Logo_original.png" alt="Logo_original" wwidth: 188px;
-      height: 103px;
-      left: 48px;
-      top: 43px;>
-    </div>
-    <nav>
-      <ul>
-        <li class="home">Home</a></li>
-        <li class="work">Work</a></li>
-        <li class="about">About</a></li>
-      </ul>
-    </nav>
-
-    <div class="oneArea">
-    </div>
+    
   <section>
   
     <div>
@@ -654,37 +636,42 @@ opacity: 90%;
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript">
+  
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
 
 
 
 $("img.Logo_original").hover(function(){
-  $(this).css("opacity", "90%");
+  $(this).css("opacity", "70%");
   }, function(){
   $(this).css("opacity", "200%");
 });
 
 $("img.intro").hover(function(){
-  $(this).css("opacity", "90%");
+  $(this).css("opacity", "70%");
   }, function(){
   $(this).css("opacity", "200%");
 });
 
 $("img.mutt_love").hover(function(){
-  $(this).css("opacity", "90%");
+  $(this).css("opacity", "70%");
   }, function(){
   $(this).css("opacity", "200%");
 });
 
 $("img.plate_theory").hover(function(){
-  $(this).css("opacity", "90%");
+  $(this).css("opacity", "70%");
   }, function(){
   $(this).css("opacity", "200%");
 });
 
 $("img.footer").hover(function(){
-  $(this).css("opacity", "90%");
+  $(this).css("opacity", "70%");
   }, function(){
   $(this).css("opacity", "200%");
 });
@@ -693,6 +680,7 @@ function fade() {
 $('.preloader').fadeOut("fast");
 }
 setTimeout(fade, 1000);
+
 
     
 

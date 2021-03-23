@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html>
+
+
 <head>
+
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.6"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <title> Home </title>
+
+<style>
+
   
-     <title>About</title>
+/* Navigation bar */
 
-     <style type="text/css">
 
-.block {
-    position: fixed;
+.customNav {
+  position: fixed;
+  width: 100%;
+  background-size: cover;
+  background-color: white !important;
+  z-index: 10;
+
+  font-family: Lobster;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 37px;
+
+color: #2D4144;
+
+text-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+.navbar-nav {
+  background-color: white;
+  margin-left: auto;
+  margin-right: 1 !important;
+
+  font-family: Lobster;
+font-style: normal;
+font-weight: normal;
+font-size: 30px !important;
+line-height: 37px;
+
+color: #2D4144;
+
+text-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand img {
+  padding-right: 50px;
+  width: 200px;
+}
+.nav-item {
+  margin: 50px 50px !important;;
+
+  font-family: Lobster;
+font-style: normal;
+font-weight: normal;
+font-size: 30px !important;
+line-height: 37px;
+
+color: #2D4144;
+
+text-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 
-
-
-img.menu {
-position: absolute;
-left: 36px;
-right: 300px;
-top: 78px;
-bottom: 2000px;
+.dropdown-menu {
+  background-size: cover;
+  color: #16181b;
+  background-color: white;
+  font-size: 30px !important;
 }
 
-img.logo_mobile {
-position: absolute;
-width: 134px;
-height: 81px;
-left: 120px;
-right: 121px;
-top: 44px;
-bottom: 1981px;
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: underline;
+    background-color: white;
+    font-size: 30px !important;
 }
+
+
+.customNav a {
+  color: #647274 !important;
+}
+
 
 img.about_mobile {
 position: absolute;
@@ -105,76 +158,7 @@ top: 1957px;
 
   
  
-img.Logo_original {
-  position: absolute;
-width: 188px;
-height: 103px;
-left: 396px;
-top: 40px;
-opacity: 80%
-}
 
-div ul li.home {
-  list-style-type:none;
-position: absolute;
-width: 98px;
-height: 50px;
-left: 650px;
-top: 65px;
-
-font-family: Lobster;
-font-style: normal;
-font-weight: normal;
-font-size: 40px;
-line-height: 50px;
-/* identical to box height */
-
-
-color: #647274;
-
-text-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
-
-}
-
-div ul li.work {
-  list-style-type:none;
-  position: absolute;
-width: 102px;
-height: 52px;
-left: 792px;
-top: 65px;
-
-font-family: Lobster;
-font-style: normal;
-font-weight: normal;
-font-size: 40px;
-line-height: 50px;
-
-color: #647274;
-
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-div ul li.about {
-  list-style-type:none;
-  position: absolute;
-width: 99px;
-height: 52px;
-left: 920px;
-top: 65px;
-
-font-family: Lobster;
-font-style: normal;
-font-weight: normal;
-font-size: 40px;
-line-height: 50px;
-
-color: #2D4144;
-
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
 
 img.about {
 
@@ -183,7 +167,7 @@ width: 1194px;
 height: 512px;
 left: 123px;
 top: 211px;
-opacity: 80%
+opacity: 70%
 }
 
 
@@ -230,7 +214,7 @@ width: 1126px;
 height: 461px;
 left: 191px;
 top: 1003px;
-opacity: 80%
+opacity: 70%
 }
 
 footer {
@@ -239,7 +223,7 @@ width: 471px;
 height: 157px;
 left: 513px;
 top: 1651px;
-opacity: 80%
+opacity: 70%
 
 }
 
@@ -270,33 +254,35 @@ div.iphone {
      </head>
 
   <header>
-    <div class="block"> </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light customNav">
+      <a class="navbar-brand" href="#"><img src="logo_iphone.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Work</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Mutt Love Rescue</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Plate Theory</a>
+            </div>
+        </ul>
+      </div>
+    </nav>
 
-    <div class="iphone">
-
-      <img class="menu" src="menu_iphone.png">
-    <img class="logo_mobile" src="logo_iphone.png">
-    </div>    
-
-    <div class="pc">
-      <img class="Logo_original" src="Logo_original.png">
-    <div>
-
-      
-    </ul>
-      <ul>
-        <li class="home">Home</a></li>
-        <li class="work">Work</a></li>
-        <ul class="dropdwn">
-        <li class="about">About</a></li>
-      </ul>
-          </div>
-          </div>
-
-  </header>
+    </header>
   
-<body>
-  <div class="oneArea">
+    
+
     
   </div>
 <section>
@@ -351,39 +337,45 @@ div.iphone {
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 <script type="text/javascript">
 
 
 
 
 $("img.Logo_original").hover(function(){
-$(this).css("opacity", "80%");
+$(this).css("opacity", "70%");
 }, function(){
 $(this).css("opacity", "200%");
 });
 
 $("img.about").hover(function(){
-$(this).css("opacity", "80%");
+$(this).css("opacity", "70%");
 }, function(){
 $(this).css("opacity", "200%");
 });
 
 $("img.skills").hover(function(){
-$(this).css("opacity", "80%");
+$(this).css("opacity", "70%");
 }, function(){
-$(this).css("opacity", "150%");
+$(this).css("opacity", "200%");
 });
 
 $("img.about").hover(function(){
-$(this).css("opacity", "80%");
+$(this).css("opacity", "70%");
 }, function(){
 $(this).css("opacity", "150%");
 });
 
 $("img.footer").hover(function(){
-$(this).css("opacity", "80%");
+$(this).css("opacity", "70%");
 }, function(){
-$(this).css("opacity", "150%");
+$(this).css("opacity", "200%");
 });
 
 
